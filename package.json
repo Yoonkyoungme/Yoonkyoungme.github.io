@@ -1,9 +1,9 @@
 {
-  "name": "zoomkoding.com",
+  "name": "yoonkyoung",
   "private": false,
-  "description": "A neat blog theme for developers",
+  "description": "tech blog",
   "version": "3.0.0",
-  "author": "zoomkoding <zoomkoding@gmail.com>",
+  "author": "dev.yoonkyoung <dev.yoonkyoung@gmail.com>",
   "dependencies": {
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
@@ -46,7 +46,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby clean && gatsby build",
+    "build": "gatsby clean && gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "deploy": "gatsby clean && gatsby build && gh-pages -d public",
