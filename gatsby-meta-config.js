@@ -6,7 +6,7 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: `https://github.com/Yoonkyoungme/Yoonkyoungme.github.io`,
+      repo: `Yoonkyoungme/Yoonkyoungme.github.io`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
