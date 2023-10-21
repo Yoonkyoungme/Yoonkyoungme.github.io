@@ -1,6 +1,6 @@
 module.exports = {
   title: `yoonkyoung`,
-  description: `김윤경의 기술 블로그`,
+  description: `yoonkyoung's tech blog`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://yoonkyoungme.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
@@ -15,7 +15,7 @@ module.exports = {
     bio: {
       role: `개발자`,
       description: ['성장과 경험을 추구하는', '세상에 가치를 더하는', '사용자 중심의'],
-      thumbnail: 'sample.png', // Path to the image in the 'asset' folder
+      thumbnail: 'profile.jpeg',
     },
     social: {
       github: `https://github.com/Yoonkyoungme`,
