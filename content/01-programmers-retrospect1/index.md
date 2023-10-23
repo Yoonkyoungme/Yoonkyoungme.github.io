@@ -1,5 +1,5 @@
 ---
-emoji: https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1621451894/noticon/wbx6sz7ouccpnmbmvf3k.png
+emoji: 📄
 title: '[프로그래머스 데브코스 5기] 1달 회고 (1)'
 date: '2023-10-23'
 author: 김윤경
