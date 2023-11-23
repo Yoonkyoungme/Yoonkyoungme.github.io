@@ -6,14 +6,16 @@ import PostHeader from '../components/post-header';
 import PostNavigator from '../components/post-navigator';
 import Post from '../models/post';
 import PostContent from '../components/post-content';
-import Utterances from '../components/utterances';
+import Giscus from '../components/giscus';
 
 function BlogTemplate({ data }) {
   const curPost = new Post(data.cur);
   const prevPost = data.prev && new Post(data.prev);
   const nextPost = data.next && new Post(data.next);
   const { comments } = data.site?.siteMetadata;
-  const utterancesRepo = comments?.utterances?.repo;
+  const giscusRepo = comments?.giscus?.repo;
+  const giscusRepoId = comments?.giscus?.repoId;
+  const giscusCategoryId = comments?.giscus?.categoryId;
 
   return (
     <Layout>
@@ -21,7 +23,14 @@ function BlogTemplate({ data }) {
       <PostHeader post={curPost} />
       <PostContent html={curPost.html} />
       <PostNavigator prevPost={prevPost} nextPost={nextPost} />
-      {utterancesRepo && <Utterances repo={utterancesRepo} path={curPost.slug} />}
+      {giscusRepo && giscusRepoId && giscusCategoryId && (
+        <Giscus
+          repo={giscusRepo}
+          repoId={giscusRepoId}
+          categoryId={giscusCategoryId}
+          path={curPost.slug}
+        />
+      )}
     </Layout>
   );
 }
@@ -80,8 +89,10 @@ export const pageQuery = graphql`
       siteMetadata {
         siteUrl
         comments {
-          utterances {
+          giscus {
             repo
+            repoId
+            categoryId
           }
         }
       }

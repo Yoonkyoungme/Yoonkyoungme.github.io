@@ -5,10 +5,13 @@ module.exports = {
   siteUrl: `https://yoonkyoungme.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
-    utterances: {
-      repo: `Yoonkyoungme/Yoonkyoungme.github.io`,
+    giscus: {
+      repo: 'Yoonkyoungme/Yoonkyoungme.github.io',
+      repoId: process.env.REACT_APP_GISCUS_REPO_ID,
+      categoryId: process.env.REACT_APP_GISCUS_CATEGORY_ID,
     },
   },
+
   ga: '0', // Google Analytics Tracking ID
   author: {
     name: `김윤경`,
