@@ -7,12 +7,10 @@ module.exports = {
   comments: {
     giscus: {
       repo: 'Yoonkyoungme/Yoonkyoungme.github.io',
-      repoId: process.env.REACT_APP_GISCUS_REPO_ID,
-      categoryId: process.env.REACT_APP_GISCUS_CATEGORY_ID,
+      repoId: 'R_kgDOKWaEnA',
+      categoryId: 'DIC_kwDOKWaEnM4CbL8z',
     },
   },
-
-  ga: '0', // Google Analytics Tracking ID
   author: {
     name: `김윤경`,
     bio: {
