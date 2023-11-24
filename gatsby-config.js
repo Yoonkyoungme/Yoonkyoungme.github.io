@@ -42,9 +42,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: 'G-F7P29TZZQ7',
+        trackingId: `G-F7P29TZZQ7`,
         head: true,
         anonymize: true,
       },
