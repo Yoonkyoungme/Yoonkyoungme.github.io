@@ -4,7 +4,7 @@ title: '[프로그래머스 데브코스 5기] 한 달 회고 1편'
 date: '2023-10-23'
 author: 김윤경
 tags: 프로그래머스 데브코스 회고 MIL
-categories: 회고
+categories: 프로그래머스
 ---
 
 ## 📝 기록보다는 기억을
