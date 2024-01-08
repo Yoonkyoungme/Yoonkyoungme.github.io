@@ -1,5 +1,5 @@
 module.exports = {
-  title: `yoonkyoung`,
+  title: `yoonkyoungme.github.io`,
   description: `yoonkyoung's tech blog`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://yoonkyoungme.github.io`,
@@ -16,7 +16,7 @@ module.exports = {
     bio: {
       role: `개발자`,
       description: ['성장과 경험을 추구하는', '세상에 가치를 더하는', '사용자 중심의'],
-      thumbnail: 'profile.jpeg',
+      thumbnail: 'profile.png',
     },
     social: {
       github: `https://github.com/Yoonkyoungme`,
