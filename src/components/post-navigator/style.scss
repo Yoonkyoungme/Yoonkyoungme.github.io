@@ -5,6 +5,7 @@
   width: 100%;
   grid-template-columns: 49.3% 49.3%;
   column-gap: 1.4%;
+  margin-bottom: 10%;
 
   .post-card {
     display: flex;
@@ -45,6 +46,16 @@
       font-weight: 600;
       margin-bottom: 7px;
       line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    .post-card {
+      margin-bottom: 15px;
     }
   }
 }
