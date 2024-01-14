@@ -19,6 +19,62 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map((node) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: encodeURI(site.siteMetadata.siteUrl + node.fields.slug),
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            // 본인의 blog rss feed용 타이틀을 명시합니다.
+            title: "yoonkyoungme.github.io's RSS Feed",
+            match: '^/blog/',
+            link: 'https://feeds.feedburner.com/gatsby/blog',
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://yoonkyoungme.github.io',
